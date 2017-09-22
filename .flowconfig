@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/.*
+.*/transpiled/.*
+.*/coverage/.*
+.*/.nyc_output/.*
+.*/test.js
+
+[include]
+./source/index.js
+
+[libs]
+flow-typed/
+types/
+
+[options]
+all=true
