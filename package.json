@@ -18,9 +18,9 @@
   "homepage": "https://github.com/krainboltgreene/snabbdom-view#readme",
   "repository": "github:krainboltgreene/snabbdom-view",
   "bugs": "https://github.com/krainboltgreene/snabbdom-view/issues",
-  "main": "transpiled/source/index.js",
+  "main": "transpiled/index.js",
   "files": [
-    "transpiled/source/"
+    "transpiled/"
   ],
   "nyc": {
     "require": [
