@@ -61,12 +61,12 @@
     "tap": "10.7.2"
   },
   "dependencies": {
-    "@unction/applicator": "2.3.0",
-    "@unction/applicators": "2.3.0",
-    "@unction/arrayify": "2.4.0",
-    "@unction/flip": "2.3.0",
-    "@unction/istype": "2.3.0",
-    "@unction/mapvalues": "3.3.0",
-    "@unction/sequence": "1.0.0"
+    "@unction/applicator": "2.6.0",
+    "@unction/applicators": "2.41.0",
+    "@unction/arrayify": "2.14.0",
+    "@unction/flip": "2.6.0",
+    "@unction/istype": "2.9.0",
+    "@unction/mapvalues": "3.38.0",
+    "@unction/sequence": "1.35.0"
   }
 }

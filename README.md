@@ -64,7 +64,7 @@ function cycle (sources) {
   const state = xstream.periodic(1000).of({author: {name: "Kurtis Rainbolt-Greene"}})
 
   return {
-    DOM: state.map(infuse(application))
+    DOM: state.map(infuse(application()))
   }
 }
 ```
