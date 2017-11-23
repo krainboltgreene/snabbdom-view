@@ -57,16 +57,16 @@
     "flow-bin": "0.59.0",
     "flow-typed": "2.2.3",
     "nyc": "11.3.0",
-    "snabbdom-helpers": "4.0.3",
+    "snabbdom-helpers": "4.1.0",
     "tap": "10.7.3"
   },
   "dependencies": {
     "@unction/applicator": "2.8.0",
-    "@unction/applicators": "2.44.0",
-    "@unction/arrayify": "2.17.0",
+    "@unction/applicators": "2.48.0",
+    "@unction/arrayify": "2.19.0",
     "@unction/flip": "2.8.0",
     "@unction/istype": "2.12.0",
-    "@unction/mapvalues": "3.41.0",
-    "@unction/sequence": "1.38.0"
+    "@unction/mapvalues": "3.44.0",
+    "@unction/sequence": "1.42.0"
   }
 }
