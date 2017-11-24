@@ -62,11 +62,11 @@
   },
   "dependencies": {
     "@unction/applicator": "2.8.0",
-    "@unction/applicators": "2.50.0",
+    "@unction/applicators": "2.51.0",
     "@unction/arrayify": "2.19.0",
     "@unction/flip": "2.8.0",
     "@unction/istype": "2.12.0",
-    "@unction/mapvalues": "3.44.0",
-    "@unction/sequence": "1.42.0"
+    "@unction/mapvalues": "3.45.0",
+    "@unction/sequence": "1.43.0"
   }
 }
