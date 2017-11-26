@@ -57,7 +57,7 @@
     "flow-bin": "0.59.0",
     "flow-typed": "2.2.3",
     "nyc": "11.3.0",
-    "snabbdom-helpers": "4.3.0",
+    "snabbdom-helpers": "5.0.0",
     "tap": "10.7.3"
   },
   "dependencies": {

@@ -18,20 +18,24 @@ const authorSignature = () => specificView(
     name: (state) => state.author.name,
   }
 )(
-  ({email, name}) => p({inner: [`My name is ${name}`, `My email is ${email}`]})
+  ({email, name}) => p({children: [`My name is ${name}`, `My email is ${email}`]})
 )
 
 const navigation = () => broadView(({name}) => {
-  return header({inner: `Hello, ${name}.`})
+  return header({children: `Hello, ${name}.`})
 })
 
+const welcome = () => () => {
+  return p({children: "Welcome to the front page"})
+}
+
 const frontPage = () => {
-  return section({inner: "Welcome to the front page"})
+  return section({children: welcome()})
 }
 
 const information = () => {
   return footer({
-    inner: [
+    children: [
       "Check me out on mastodon.social",
       authorSignature(),
       img(),
@@ -41,7 +45,7 @@ const information = () => {
 
 const application = () => {
   return main({
-    inner: [
+    children: [
       navigation(),
       frontPage(),
       information(),
@@ -61,14 +65,14 @@ test(({same, end}) => {
   same(
     infuse(application())(state),
     main({
-      inner: [
-        header({inner: "Hello, Kurtis Rainbolt-Greene."}),
-        section({inner: "Welcome to the front page"}),
+      children: [
+        header({children: "Hello, Kurtis Rainbolt-Greene."}),
+        section({children: p({children: "Welcome to the front page"})}),
         footer({
-          inner: [
+          children: [
             "Check me out on mastodon.social",
             p({
-              inner: [
+              children: [
                 "My name is Kurtis Rainbolt-Greene",
                 "My email is kurtis@rainbolt-greene.online",
               ],
