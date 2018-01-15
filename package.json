@@ -41,32 +41,32 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
-    "babel-eslint": "8.0.3",
+    "babel-eslint": "8.2.1",
     "babel-plugin-istanbul": "4.1.5",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
     "chokidar-cli": "1.2.0",
-    "eslint": "4.12.1",
+    "eslint": "4.15.0",
     "eslint-plugin-babel": "4.1.2",
-    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-flowtype": "2.41.0",
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-promise": "3.6.0",
     "flow": "0.2.3",
-    "flow-bin": "0.60.1",
+    "flow-bin": "0.63.1",
     "flow-typed": "2.2.3",
-    "nyc": "11.3.0",
-    "snabbdom-helpers": "6.0.0",
-    "tap": "11.0.0"
+    "nyc": "11.4.1",
+    "snabbdom-helpers": "7.1.0",
+    "tap": "11.0.1"
   },
   "dependencies": {
-    "@unction/applicator": "2.8.0",
-    "@unction/applicators": "2.56.0",
-    "@unction/arrayify": "2.19.0",
-    "@unction/flip": "2.8.0",
-    "@unction/istype": "2.12.0",
-    "@unction/mapvalues": "3.46.0",
-    "@unction/sequence": "1.46.0"
+    "@unction/applicator": "3.0.0",
+    "@unction/applicators": "10.0.0",
+    "@unction/arrayify": "6.0.0",
+    "@unction/flip": "3.0.0",
+    "@unction/istype": "4.0.0",
+    "@unction/mapvalues": "8.0.1",
+    "@unction/sequence": "7.0.0"
   }
 }
