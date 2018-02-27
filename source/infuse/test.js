@@ -1,4 +1,4 @@
-/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
+/* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, no-undefined */
 import {test} from "tap"
 
 import {main} from "snabbdom-helpers"
@@ -10,45 +10,25 @@ import {p} from "snabbdom-helpers"
 
 import infuse from "./"
 
-const authorSignature = () => ({author: {name, email}}) => {
-  return p({children: [`My name is ${name}`, `My email is ${email}`]})
-}
-
-const navigation = () => ({name}) => {
-  return header({children: `Hello, ${name}.`})
-}
-
-const welcome = () => () => {
-  return p({children: "Welcome to the front page"})
-}
-
-const frontPage = () => {
-  return section({children: welcome()})
-}
-
-const information = () => {
-  return footer({
-    children: [
-      "Check me out on mastodon.social",
-      authorSignature(),
-      img(),
-    ],
-  })
-}
-
-const application = () => {
-  return main({
-    children: [
-      navigation(),
-      frontPage(),
-      information(),
-    ],
-  })
-}
-
 test(({same, end}) => {
+  const application = () => {
+    return main({
+      children: [
+        ({name}) => header({children: `Hello, ${name}.`}),
+        section({children: [p({children: "Welcome to the front page"})]}),
+        ({social}) => footer({
+          children: [
+            `Check me out on ${social}`,
+            ({author: {name, email}}) => p({children: [`My name is ${name}`, `My email is ${email}`]}),
+            img(),
+          ],
+        }),
+      ],
+    })
+  }
   const state = {
     name: "Kurtis Rainbolt-Greene",
+    social: "mastodon.social",
     author: {
       name: "Kurtis Rainbolt-Greene",
       email: "kurtis@rainbolt-greene.online",
@@ -75,6 +55,30 @@ test(({same, end}) => {
         }),
       ],
     })
+  )
+
+  end()
+})
+
+test("null in children", ({same, end}) => {
+  const application = () => p({children: ["test", null, "test"]})
+  const state = {name: "Kurtis Rainbolt-Greene"}
+
+  same(
+    infuse(application())(state),
+    p({children: ["test", null, "test"]})
+  )
+
+  end()
+})
+
+test("null from infuse", ({same, end}) => {
+  const application = () => p({children: ["test", () => null, "test"]})
+  const state = {name: "Kurtis Rainbolt-Greene"}
+
+  same(
+    infuse(application())(state),
+    p({children: ["test", null, "test"]})
   )
 
   end()

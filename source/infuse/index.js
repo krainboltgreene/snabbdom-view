@@ -4,10 +4,10 @@ import flip from "@unction/flip"
 
 export default function infuse (component: ComponentType): Function {
   return function infuseState (state: StateType): VirtualDOMNodeType {
-    if (component instanceof Function) {
+    if (component && component instanceof Function) {
       const view = component(state)
 
-      if (view.children instanceof Array) {
+      if (view && view.children instanceof Array) {
         return {
           ...view,
           children: mapValues(flip(infuse)(state))(view.children),
@@ -17,7 +17,7 @@ export default function infuse (component: ComponentType): Function {
       return view
     }
 
-    if (component.children instanceof Array) {
+    if (component && component.children instanceof Array) {
       return {
         ...component,
         children: mapValues(flip(infuse)(state))(component.children),
